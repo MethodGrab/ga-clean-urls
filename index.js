@@ -1,11 +1,11 @@
 // https://developers.google.com/analytics/devguides/collection/analyticsjs/writing-plugins
 
-;(function(  ) {
+;(function(  ) { // eslint-disable-line
 	'use strict';
 
 	function _ga(  ) {
 		return window[ window.GoogleAnalyticsObject || 'ga' ];
-	};
+	}
 
 	// :: ( pluginName: String, pluginConstructor: Function ) → null
 	// Provides a plugin name and constructor function to analytics.js. This

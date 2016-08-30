@@ -9,7 +9,6 @@ module.exports = {
 	},
 
 	rules : {
-		strict          : [ 2, 'function' ],
-		'no-extra-semi' : 0,
+		strict : [ 2, 'function' ],
 	},
 };
