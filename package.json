@@ -19,7 +19,6 @@
   ],
   "scripts": {
     "test": "npm run lint",
-    "preversion": "npm run build",
     "lint": "eslint index.js test/*.js",
     "build": "uglifyjs index.js -o index.min.js --compress --mangle"
   },
