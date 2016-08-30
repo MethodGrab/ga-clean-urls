@@ -1,6 +1,6 @@
 {
   "name": "ga-clean-urls",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A plugin for Google Analytics to remove UTM query strings from URLs",
   "license": "MIT",
   "repository": "MethodGrab/ga-clean-urls",
