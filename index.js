@@ -3,22 +3,22 @@
 ;(function(  ) {
 	'use strict';
 
-	var _ga;
+	function _ga(  ) {
+		return window[ window.GoogleAnalyticsObject || 'ga' ];
+	};
 
 	// :: ( pluginName: String, pluginConstructor: Function ) → null
 	// Provides a plugin name and constructor function to analytics.js. This
 	// function works even if the site has customized the ga global identifier.
 	function providePlugin( pluginName, pluginConstructor ) {
-		_ga = window[ window.GoogleAnalyticsObject || 'ga' ];
-
-		if ( typeof _ga === 'function' ) {
-			_ga( 'provide', pluginName, pluginConstructor );
+		if ( typeof _ga() === 'function' ) {
+			_ga()( 'provide', pluginName, pluginConstructor );
 		}
 	}
 
-	function CleanUrls(  ) {
+	function CleanUrls( tracker, opts ) {
 		// push callback to the end of the queue
-		_ga( stripUtmQueries );
+		_ga()( stripUtmQueries );
 	}
 
 	function stripUtmQueries(  ) {
